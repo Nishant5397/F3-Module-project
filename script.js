@@ -54,7 +54,7 @@ function showLocationOnMap(lat, lon, data) {
     </ul>
     <ul>
       <li>Organisation: ${data.org}</li>
-      <li>Hostname: ${data.timezone}</li>
+      <li>Hostname: ${location.hostname}</li>
     </ul>
   `;
 
