@@ -1,3 +1,15 @@
+function getIpAddress() {
+  fetch("https://api.ipify.org/?format=json")
+    .then((res) => res.json())
+    .then((data) => {
+      const ipAddress = data.ip;
+      document.getElementById("ipLoad").textContent = ipAddress;
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });
+}
+
 function getUserInfo() {
   // Retrieve user's IP address using an API
   fetch("https://api.ipify.org/?format=json")
@@ -148,3 +160,4 @@ function filterPostOffices() {
     }
   }
 }
+window.addEventListener("DOMContentLoaded", getIpAddress);
